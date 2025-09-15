@@ -25,14 +25,14 @@ def main():
     trained_face_data = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 
     imagens = {
-        "Davi": "GithubFoto.jpg",
-        "Charles Leclerc": "CharlesLeclerc.png",
-        "Zendaya": "Zendaya.png",
-        "Ye": "Ye.png"
+        "Davi": "ImagensTeste/GithubFoto.jpg",
+        "Charles Leclerc": "ImagensTeste/CharlesLeclerc.png",
+        "Zendaya": "ImagensTeste/Zendaya.png",
+        "Ye": "ImagensTeste/Ye.png"
     }
 
    
-    nome = "Ye"
+    nome = "Davi"
     img = carregar_imagem(imagens[nome])
     img = ajustar_imagem_para_tela(img)
 
