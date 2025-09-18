@@ -2,8 +2,13 @@ import cv2
 from screeninfo import get_monitors
 
 def ajustar_imagem_para_tela(img):
-    screen = get_monitors()[0]
-    screen_res = (screen.width, screen.height)
+    try:
+        screen = get_monitors()[0]
+        screen_res = (screen.width, screen.height)
+    except Exception as e:
+        print(f"Erro ao obter a resolução da tela: {e}")
+        screen_res = (800, 600)
+        
     height, width = img.shape[:2]
     scale_width = screen_res[0] / width
     scale_height = screen_res[1] / height
