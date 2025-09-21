@@ -29,10 +29,10 @@ def main():
         cv2.imshow("Reconhecimento Facial - by Davi Falcao", frame)       
         cv2.waitKey(1) 
 
-        #Ao fechar a janela sai do loop (As vezes o método waitKey não detecta o fechamento da janela)
+        #Ao fechar a janela sai do loop 
         if cv2.getWindowProperty("Reconhecimento Facial - by Davi Falcao", cv2.WND_PROP_VISIBLE) < 1:
             break
-        
+
     cv2.destroyAllWindows()
 
 if __name__ == "__main__":
